@@ -109,5 +109,6 @@ figures_list = [
     Rectangle(5, 8), Rectangle(9, 2), Rectangle(5, 7)
 ]
 
+# 21. Затем через цикл вызвать у всех объектов списка метод info
 for figure in figures_list:
     figure.info()
