@@ -24,15 +24,16 @@ class Teacher(Person):
         super().__init__(fullname, age, is_married)
         self.experience = experience
 
-    salary = 10000
+    salary = 20000
 
     def salary_with_experience(self):
         if self.experience > 3:
             ranged_years = self.experience - 3
             percents_add = 0.05
-            for year in range(ranged_years):
+            for _ in range(ranged_years):
                 self.salary += self.salary * percents_add
             return self.salary
+        return 'No bonus here, your experience less than 3 years.'
 
 
 def create_students():
