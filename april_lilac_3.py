@@ -8,8 +8,8 @@ class Computer:
         self.__memory = memory
 
     def __str__(self):
-        return f'Центральный процессор компьютера (производительность): {self.__cpu} ' \
-               f'GHz, оперативная память: {self.__memory}Гб'
+        return f'Центральный процессор компьютера (производительность): {self.cpu} GHz, ' \
+               f'оперативная память: {self.memory}Гб'
 
     def __gt__(self, other):
         return self.__memory > other.__memory
@@ -107,8 +107,8 @@ class SmartPhone(Computer, Phone):
 
     def __str__(self):
         return f'model: {self.name} ' \
-               f'Центральный процессор смартфона (производительность): {self.__cpu} ' \
-               f'GHz, оперативная память: {self.__memory}Гб ' \
+               f'Центральный процессор смартфона (производительность): {self.cpu} GHz' \
+               f'оперативная память: {self.memory}Гб ' \
                f'sim cards available: 2 {self.sim_cards_list}'
 
 # 9. В каждом классе переопределить магический метод str которые бы возвращали полную информацию об объекте. (DONE)
@@ -124,7 +124,7 @@ iphone13_pro_max = SmartPhone('iPhone 13 Pro Max', 3.23, 6, [SimCards.MEGA.value
 redmi_note8pro = SmartPhone('Redmi Note 8 Pro', 2.05, 8, [SimCards.BEELINE.value, SimCards.MEGA.value])
 #
 # # 12. Распечатать информацию о созданных объектах
-# print(asus_rog)
+print(asus_rog)
 # print(nokia6233)
 print(iphone13_pro_max)
 # print(redmi_note8pro)
